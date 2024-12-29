@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jojo</title>
+    <style>
+      @import url("https://fonts.cdnfonts.com/css/sf-fedora-titles");
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #222;
+        color: #fff;
+      }
+      header {
+        font-family: "SF Fedora Shadow", Arial, sans-serif;
+        background: linear-gradient(10deg, #423535, #75103a);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 10px;
+      }
+      nav a {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #f797d0;
+        text-decoration: none;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #eb008b;
+      }
+      .ph {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #d71820;
+      }
+      .bt {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #4979a3;
+      }
+      .sc {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #4362c7;
+      }
+      .db {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #254ac4;
+      }
+      .gw {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #eb008b;
+      }
+      .so {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #254ac4;
+      }
+      .sr {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #c95b11;
+      }
+      .jj {
+        font-family: "SF Fedora", Arial, sans-serif;
+        color: #000000;
+      }
+      img {
+        max-width: 350px;
+        max-height: 350px;
+        float: left;
+        margin-right: 5px;
+      }
+      /*     .container1 img {
+        width: 350px;
+        height: auto;
+        margin-right: 10px;
+      }
+        */
+      .container1 {
+        display: flex;
+        align-items: center;
+        /*flex-wrap: wrap;*/
+        gap: 10px;
+      }
+      h3 {
+        margin: 0;
+      }
+      /*.container1 p {
+        margin: 10px 0 0;
+      }*/
+      .container1 div {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+      p {
+        margin: 5px 0 0;
+      }
+      @media (max-width: 350px) {
+        .container1 {
+          flex-direction: column;
+        }
+        .container1 img {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JoJo's bizarre universe</h1>
+    </header>
+
+    <nav>
+      <a onclick="navigate('home')">Inicio</a>
+      <a onclick="navigate('history')">História</a>
+      <a onclick="navigate('characters')">Personagens</a>
+      <a onclick="navigate('stands')">Stands</a>
+    </nav>
+    <div id="content" class="content">
+      <h1>Bem-vindo ao JoJo Bizarre universe!</h1>
+      <p>Escolha uma das opções acima para explorar o site.</p>
+    </div>
+  </body>
+  <script>
+    const pages = {
+      home: `
+<h1>Bem-vindo ao JoJo Bizarre universe!</h1>
+<p>Escolha uma das opções acima para explorar o site.</p>`,
+      history: `<h1>História de JoJo</h1>
+      <h2 class="ph">Parte 1: Phantom Blood (1880s)</h2>
+      <p>Jonathan Joestar, um jovem aristocrata inglês, enfrenta Dio Brando, um rapaz adotado por seu pai. Dio ambiciona a fortuna dos Joestars, mas sua transformação em vampiro com a máscara de pedra desencadeia uma rivalidade mortal. Jonathan treina com Wiil A. Zeppeli para dominar a energia Hamon, usada para combater criaturas sobrenaturais. Após uma batalha épica, Jonathan sacrifica sua vida para derrotar Dio, salvando sua esposa Erina.</p>
+      <h2 class="bt">Parte 2: Battle Tendency (1938-39)</h2>
+      <p>Joseph Joestar, mais astuto e irreverente que seu avô enfrenta os pillar men, antigos seres que criaram a máscara de pedra. Eles buscam a pedra vermelha de Aja para se tornarem seres perfeitor. Com a ajuda de caesar Zeppeli e Lisa Lisa, Joseph aprende a usar Hamon e derrota os pillar men em uma batalha cheia de reviravoltatas. Kars, o lídes se torna o "ser perfeito", mas é jogado para o espaço por Joseph,onde é fadado à eterna solidão.</p>
+      <h2 class="sc">Parte 3: Stardust Crusaders (1987-89)</h2>
+      <p>DIO retorna após sobreviver anexando sua cabeça ao corpo de Jonathan. Isso disperta os Stand, manifestações de energia espiritual. Jotaro Kujo, com seu Stand "Star Platinum", parte para o Egito ao lado de seu avô Joseh, Avdol, Kakyion, Polnareff e Iggy para derrotar DIO. A jornada inclui batalhas contra vários usúarios de Stand. A batalha final contra DIO resulta na morte de vários aliados, mas Jotaro consegue derrotar DIO.</p>
+      <h2 class="db">Parte 4: Diamond is Unbreakable (1999)</h2>
+      <p>Na cidade de Morioh, Josuke e seus amigos descobrem que a flecha que desperta Stands está circulando, criando novos usuários. Eles investigam crimes e encontram Yoshikage Kira, um serial killer obcecado por mãos femininas. Kira, com o Stand “Killer Queen”, aterroriza a cidade. Após um confronto tenso, Josuke e seus aliados derrotam Kira, restaurando a paz em Morioh.</p>
+      <h2 class="gw">Parte 5: Golden Wind (2001)</h2>
+      <p>Giorno Giovanna, filho biológico de DIO, aspira se tornar um “gangstar” e reformar a máfia italiana, Passione. Ele se junta a Bruno Bucciarati e sua equipe de usuários de Stand. Eles enfrentam o misterioso chefe, Diavolo, que busca manter sua identidade secreta. Após batalhas épicas, Giorno usa o Stand “Gold Experience Requiem” para derrotar Diavolo, assumindo o controle da Passione.</p>
+      <h2 class="so">Parte 6: Stone Ocean (2011)</h2>
+      <p>Jolyne é presa por um crime que não cometeu. Na prisão, ela descobre os planos de Enrico Pucci, um seguidor de DIO, para recriar o universo usando o Stand “Made in Heaven”. Com aliados, Jolyne luta para proteger o legado dos Joestars. Apesar de se sacrificar, Pucci é derrotado por Emporio, e o universo é reiniciado, oferecendo uma nova chance para todos.</p>
+      <h2 class="sr">Parte 7: Steel Ball Run (1890s, universo alternativo)</h2>
+      <p>Em um universo alternativo, Johnny Joestar, um ex-jóquei paraplégico, participa de uma corrida transcontinental para recuperar a habilidade de andar. Ele e Gyro Zeppeli, que usa a técnica Spin, enfrentam Funny Valentine, o presidente dos EUA, que busca unir as partes do corpo de um santo para alcançar a supremaciqa. Johnny derrota Valentine usando de Stand, o "Tusk".</p>
+      <h2 class="jj">Parte 8: JoJolion (2011, universo alternativo)</h2>
+      <p>Em uma Morioh alternativa, Josuke Higashikata é encontrado sem memória. Ele descobre ser uma fusão de duas pessoas. A história envolve um mistério sobre uma doença que atinge a família Higashikata, Stands poderosos e as Rokakakas, frutas milagrosas. Tooru, o vilão, usa o Stand "Wonder of U", mas Josuke e seus aliados o derrotam.</p>`,
+      characters: `<nav>
+        <a onclick="navigate('part1')" class="ph">Phantom Blood</a>
+        <a onclick="navigate('part2')" class="bt">Battle Tendency</a>
+        <a onclick="navigate('part3')" class="sc">Stardust Crusaders</a>
+        <a onclick="navigate('part4')" class="db">Diamond is Unbreakable</a>
+        <a onclick="navigate('part5')" class="gw">Golden Wind</a>
+        <a onclick="navigate('part6')" class="so">Stone Ocean</a>
+        <a onclick="navigate('part7')" class="sr">Steel Ball Run</a>
+        <a onclick="navigate('part8')" class="jj">JoJolion</a>
+      </nav>
+      `,
+      part1: `<h2 class="ph">Jonathan Joestar:</h2>
+      <div class="container1">
+      <img src="./images/Jonathan_Joestar.webp"></img>
+      <div>
+      <b><p>Nome</p></b> Jonathan Joestar
+      <b><p>Idade</p></b> 20 anos
+      <b><p>Raça</p></b> Humano
+      <b><p>Gênero</p></b> Masculino
+      <b><p>Nascimento e morte</p></b> ⛥4 abr 1868 - 7 fev 1889✞
+      <b><p>Tipo de poder</p></b> Hamon
+    </div>
+    </div>
+    <h2 class="ph">DIO Brando:</h2>
+    <div class="container1">
+      <img src="./images/Dio_part1.webp">
+      <div>
+        <b><p>Nome</p></b> DIO Brando
+        <b><p>Idade</p></b> 20 anos
+        <b><p>Raça</p></b> Vampiro
+        <b><p>Gênero</p></b> Masculino
+        <b><p>Nascimento e morte</p></b>⛥? 1867 - 16 jan 1989✞
+        <b><p>Tipo de poder</p></b> Vampirismo
+      </div>
+    </div>
+    <h2 class="ph">William A. Zeppeli</h2>
+    <div class="container1">
+      <img src="./images/Will_Zepelli.webp">
+      <div>
+        <b><p>Nome</p></b> William Antonio Zeppeli
+        <b><p>Idade</p></b> 50 anos
+        <b><p>Raça</p></b> Humano
+        <b><p>Gênero</p></b> Masculino
+        <b><p>Nascimento e morte</p></b>⛥19 jan 1838 - 1 dez 1888✞
+        <b><p>Tipo de poder</p></b> Hamon
+      </div>
+    </div>
+    <h2 class="ph">Robert E. O. Speedwagon</h2>
+    <div class="container1">
+      <img src="./images/SpeedwagonManga.webp">
+      <div>
+        <b><p>Nome</p></b> Robert E. O. Speedwagon
+        <b><p>Idade</p></b> 25 anos
+        <b><p>Raça</p></b> Humano
+        <b><p>Gênero</p></b> Masculino
+        <b><p>Nascimento e morte</p></b>⛥16 out 1863 - ? 1952✞
+        <b><p>Tipo de poder</p></b> n/a
+      </div>
+    </div>
+    `,
+    };
+    function navigate(page) {
+      const contentDiv = document.getElementById("content");
+      contentDiv.innerHTML = pages[page] || "<h1>Página não encontrada</h1>";
+    }
+  </script>
+</html>
